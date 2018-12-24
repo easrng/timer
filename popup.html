@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="material.css">
+        <script defer src="material.min.js"></script>
+        <style>
+            body {
+                width: 500px;
+            }
+
+            #stop {
+                display: none;
+            }
+
+            #start,#stop {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Timer</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <svg style="margin-left: calc(50% - 125px);" width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                <g>
+                    <title>Layer 1</title>
+                    <path d="m158.33333,8.33334l-66.66666,0l0,22.22222l66.66666,0l0,-22.22222zm44.77778,71l15.77778,-15.77778c-4.77778,-5.66667 -10,-11 -15.66667,-15.66667l-15.77778,15.77778c-17.22222,-13.77778 -38.88889,-22 -62.44444,-22c-55.22222,0 -100,44.77778 -100,100s44.66666,100 100,100s100,-44.77778 100,-100c0,-23.55555 -8.22222,-45.22222 -21.88889,-62.33333zm-78.11111,140.11111c-43,0 -77.77777,-34.77778 -77.77777,-77.77777s34.77778,-77.77777 77.77777,-77.77777s77.77777,34.77778 77.77777,77.77777s-34.77778,77.77777 -77.77777,77.77777z" fill="#00BCD4" id="svg_2"/>
+                    <text fill="#00BCD4" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="106.45594" y="131.10464" id="timeleft" font-size="24" font-family="sans-serif" text-anchor="middle" xml:space="preserve" transform="matrix(1.7970695495605469,0,0,1.6538461446762085,-66.28131473064423,-64.40384525060654) ">0:00</text>
+                </g>
+            </svg>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <button id="start" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Start
+    </button>
+            <button id="stop" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Stop
+    </button>
+        </div>
+        <div class="mdl-card__menu">
+            <button id="reset" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">refresh</i>
+            </button>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
