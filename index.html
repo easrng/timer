@@ -7,9 +7,11 @@
     <title>Launch Web Timer</title>
     <style>
        button:hover {
--webkit-animation: cssAnimation 1s 5 linear;
--moz-animation:  cssAnimation 1s 5 linear;
--o-animation: cssAnimation 1s 5 linear;
+    animation-name: cssAnimation;
+    animation-direction: alternate;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 @-webkit-keyframes cssAnimation {
 from {-webkit-transform: rotate(0deg) scale(1.000) skew(0deg) translate(0px) ;
@@ -41,6 +43,22 @@ to {-webkit-transform: rotate(0deg) scale(1.500) skew(0deg) translate(0px) ;
 -o-transform: rotate(0deg) scale(1.500) skew(0deg) translate(0px) ;
  }
 }
+      button {
+    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: linear;
+    position: fixed;
+    top: calc(50% - 1.5em);
+    left: calc(50% - 1.5em);
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    zoom: 2;
+    border: none;
+    background-color: #03A9F4;
+    box-shadow: 0 3px 4px #000000ab;
+}
       </style>
   </head>
   <body>
@@ -48,7 +66,7 @@ to {-webkit-transform: rotate(0deg) scale(1.500) skew(0deg) translate(0px) ;
   <script type="text/javascript">
    function autorun()
    {
-    document.querySelector("#button").onclick=function (){
+    document.querySelector("button").onclick=function (){
       window.open("popup.html","_blank","width=500,height=300")
     }
    }
